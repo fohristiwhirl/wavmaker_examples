@@ -7,7 +7,7 @@ import (
 
 const TWO_PI = 6.28318530718
 
-func make_sine(freq float64, frames uint32) wavmaker.WAV {
+func make_sine(freq float64, frames uint32) *wavmaker.WAV {
 	wav := wavmaker.New(frames)
 	for n := uint32(0); n < frames; n++ {
 		raw_val := 32767 * math.Sin((float64(n) / (wavmaker.PREFERRED_FREQ / TWO_PI)) * freq)

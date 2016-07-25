@@ -17,7 +17,7 @@ const (
 
 func main() {
 
-	output := wavmaker.New(44100 * 5)
+	output := wavmaker.New(44100 * 3)
 
 	c4, err := wavmaker.Load("piano.ff.C4.wav")
 	if err != nil {
@@ -32,14 +32,14 @@ func main() {
 	b4 := c4.StretchedRelative(C4 / B4)
 	c5 := c4.StretchedRelative(C4 / C5)
 
-	output.Add(22050 * 0, c4, 0, 44100 * 4)
-	output.Add(22050 * 1, d4, 0, 44100 * 4)
-	output.Add(22050 * 2, e4, 0, 44100 * 4)
-	output.Add(22050 * 3, f4, 0, 44100 * 4)
-	output.Add(22050 * 4, g4, 0, 44100 * 4)
-	output.Add(22050 * 5, a4, 0, 44100 * 4)
-	output.Add(22050 * 6, b4, 0, 44100 * 4)
-	output.Add(22050 * 7, c5, 0, 44100 * 4)
+	output.Add(11025 * 0, c4, 0, 44100 * 4)
+	output.Add(11025 * 1, d4, 0, 44100 * 4)
+	output.Add(11025 * 2, e4, 0, 44100 * 4)
+	output.Add(11025 * 3, f4, 0, 44100 * 4)
+	output.Add(11025 * 4, g4, 0, 44100 * 4)
+	output.Add(11025 * 5, a4, 0, 44100 * 4)
+	output.Add(11025 * 6, b4, 0, 44100 * 4)
+	output.Add(11025 * 7, c5, 0, 44100 * 4)
 
 	output.Save("scale.wav")
 }
