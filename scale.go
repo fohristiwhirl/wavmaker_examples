@@ -1,3 +1,6 @@
+// Note: the Add function in wavmaker is routinely getting updated; this example may fail
+// if it's not up to date with the most recent changes.
+
 package main
 
 import (
@@ -32,14 +35,14 @@ func main() {
 	b4 := c4.StretchedRelative(C4 / B4)
 	c5 := c4.StretchedRelative(C4 / C5)
 
-	output.Add(11025 * 0, c4, 0, 44100 * 4)
-	output.Add(11025 * 1, d4, 0, 44100 * 4)
-	output.Add(11025 * 2, e4, 0, 44100 * 4)
-	output.Add(11025 * 3, f4, 0, 44100 * 4)
-	output.Add(11025 * 4, g4, 0, 44100 * 4)
-	output.Add(11025 * 5, a4, 0, 44100 * 4)
-	output.Add(11025 * 6, b4, 0, 44100 * 4)
-	output.Add(11025 * 7, c5, 0, 44100 * 4)
+	output.Add(11025 * 0, c4, 0, 44100 * 4, 1.0)
+	output.Add(11025 * 1, d4, 0, 44100 * 4, 1.0)
+	output.Add(11025 * 2, e4, 0, 44100 * 4, 1.0)
+	output.Add(11025 * 3, f4, 0, 44100 * 4, 1.0)
+	output.Add(11025 * 4, g4, 0, 44100 * 4, 1.0)
+	output.Add(11025 * 5, a4, 0, 44100 * 4, 1.0)
+	output.Add(11025 * 6, b4, 0, 44100 * 4, 1.0)
+	output.Add(11025 * 7, c5, 0, 44100 * 4, 1.0)
 
 	output.Save("scale.wav")
 }
